@@ -106,11 +106,10 @@ def bert(model_name):
             Match_Scores.header("Match Score")
             Datas.header("Data")
     
-        
+            
             df=fino
             column=['source','target','match']
             df_map=pd.DataFrame(columns=column)
-            st.dataframe(df)
             col1,col2,col3,col58=st.beta_columns(4)
             c1=col1.text(df.Source[0])
             t1=col2.selectbox("Target",[df.Target[0],'Acct_id', 'Acct_UIDNo.', 'Acct_FName', 'Acct_MName', 'Acct_LName', 'Acct_Addr1', 'Acct_Addr2', 'Acct_City', 'Acct_State', 'Acct_phone', 'Acct_email', 'Acct_DOB', 'Acct_Gender'],key=1)
